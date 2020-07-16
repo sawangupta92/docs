@@ -20,6 +20,13 @@ err := db.All(&users)
 err = db.Where("id in (?)", 1, 2, 3).All(&users)
 ```
 
+### Find All with Order
+
+```go
+users := []User{}
+err := db.Order("id desc").All(&users)
+```
+
 #### Find Last
 
 ```go
